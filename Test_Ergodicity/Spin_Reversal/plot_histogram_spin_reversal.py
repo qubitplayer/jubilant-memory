@@ -7,11 +7,11 @@ color1="#66c2a6"
 color2="#fc8e62"
 color3="#8ea0cb"
 
-data = open("degeneracies_loop.txt", "r")
+data = open("degeneracies_spin_reversal.txt", "r")
 tmp = {}
 for row in data:
     row = row.split(" ")
-    tmp[row[5].replace("\n","")] = int(row[4])
+    tmp[row[6].replace("\n","")] = int(row[5])
 
 degeneracy_states = []
 degeneracy_states_err = []
@@ -53,5 +53,5 @@ plt.ylabel("Counts", fontsize=9)
 plt.xticks([i for i in range(total_degeneracy)], [str(i+1) for i in range(total_degeneracy)], fontsize=8)
 plt.yticks(fontsize=8)
 plt.title("2x2x2 Lattice", fontsize=10)
-plt.savefig('Histogram_ergodicity_L2x2x2.png',dpi=300, bbox_inches = "tight")
+plt.savefig('Histogram_ergodicity_L2x2x2_spin_reversal.png',dpi=300, bbox_inches = "tight")
 
