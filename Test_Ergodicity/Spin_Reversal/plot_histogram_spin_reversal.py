@@ -11,7 +11,7 @@ data = open("degeneracies_spin_reversal.txt", "r")
 tmp = {}
 for row in data:
     row = row.split(" ")
-    tmp[row[6].replace("\n","")] = int(row[5])
+    tmp[row[-1].replace("\n","")] = int(row[-2])
 
 degeneracy_states = []
 degeneracy_states_err = []
